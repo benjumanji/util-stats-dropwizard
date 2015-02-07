@@ -1,6 +1,6 @@
 seq(bintraySettings:_*)
 
-organization := "io.artfuldoge"
+organization := "io.artfuldodge"
 
 name := "util-stats-dropwizard"
 
