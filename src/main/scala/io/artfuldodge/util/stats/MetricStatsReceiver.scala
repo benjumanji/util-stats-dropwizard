@@ -31,7 +31,7 @@ class MetricsStatsReciever(metrics: MetricRegistry) extends StatsReceiver {
   private[this] def toDotted(name: Seq[String]): String = name.mkString(".")
 
   val repr = this
-  private[this] val _metrics = metrics
+  def registry: MetricRegistry = metrics
 
   def counter(name: String*): Counter = {
     new WrappedCounter(metrics.counter(toDotted(name)))

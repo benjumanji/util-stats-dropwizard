@@ -4,7 +4,7 @@ organization := "io.artfuldoge"
 
 name := "util-stats-dropwizard"
 
-version := "0.1"
+version := "0.2-SNAPSHOT"
 
 description := "A stats reciever backed by a dropwizard metrics registry"
 
