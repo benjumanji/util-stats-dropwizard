@@ -26,7 +26,9 @@ private[stats] class WrappedGauage(metrics: MetricRegistry, name: String) extend
   def remove() { metrics.remove(name) }
 }
 
-class MetricsStatsReciever(metrics: MetricRegistry) extends StatsReceiver {
+class MetricsStatsReceiver(metrics: MetricRegistry) extends StatsReceiver {
+
+  def this() = this(MetricsStatsReceiver.registry)
 
   private[this] def toDotted(name: Seq[String]): String = name.mkString(".")
 
@@ -52,4 +54,8 @@ class MetricsStatsReciever(metrics: MetricRegistry) extends StatsReceiver {
   }
 }
 
-object MetricsStatsReciever extends MetricsStatsReciever(new MetricRegistry)
+object MetricsStatsReceiver {
+  private[this] val metrics = new MetricRegistry
+
+  def registry = metrics
+}
