@@ -21,7 +21,7 @@ private[stats] class WrappedHistogram(histogram: MetricsHistogram) extends Stat 
   def add(value: Float) = histogram.update(value.toLong)
 }
 
-private[stats] class WrappedGauage(metrics: MetricRegistry, name: String) extends Gauge
+private[stats] class WrappedGauge(metrics: MetricRegistry, name: String) extends Gauge
 {
   def remove() { metrics.remove(name) }
 }
@@ -50,7 +50,7 @@ class MetricsStatsReceiver(metrics: MetricRegistry) extends StatsReceiver {
       def getValue(): Float = f
     })
 
-    new WrappedGauage(metrics, dotted)
+    new WrappedGauge(metrics, dotted)
   }
 }
 
