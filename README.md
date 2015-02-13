@@ -1,4 +1,4 @@
-Drowpwizard StatsReceiver for use with twitter-util StatsRecievers
+Dropwizard StatsReceiver for use with twitter-util StatsRecievers
 ==================================================================
 
 There is one major use case this is designed for: finagle. To use with finagle simply include the library on the class path, it will be loaded automatically via the `LoadService` class and added to the DefaultReciever. You can then use the default reciever safe in the knowledge that all your stats are being collected into a Drowpwizard metrics registry. To get them back out again simply grab the registry from the companion object and use as you would any other registry for reporting. An example
