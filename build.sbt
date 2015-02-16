@@ -4,7 +4,7 @@ organization := "io.artfuldodge"
 
 name := "util-stats-dropwizard"
 
-version := "0.2"
+version := "0.3-SNAPSHOT"
 
 description := "A stats reciever backed by a dropwizard metrics registry"
 
