@@ -35,5 +35,5 @@ To add to your sbt project:
 
 ```
 resolvers += "benjumanji" at "http://dl.bintray.com/benjumanji/maven"
-libraryDependencies += "io.artfuldodge" %% "util-stats-dropwizard" % "0.3"
+libraryDependencies += "io.artfuldodge" %% "util-stats-dropwizard" % "0.3.1"
 ```

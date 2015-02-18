@@ -44,7 +44,6 @@ class MetricsStatsReceiver(metrics: MetricRegistry) extends StatsReceiverWithCum
 
   protected[this] def registerGauge(names: Seq[String], f: => Float) {
     val dotted: String = toDotted(names)
-    println(s"adding gauge with name $dotted")
 
     metrics.register(dotted, new MetricsGauge[Float] {
       def getValue(): Float = f
